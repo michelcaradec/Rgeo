@@ -2,7 +2,12 @@
 
 Utilitaire de géolocalisation à partir d'un code postal.
 
-Remarque : pour une géolocalisation plus précise, utiliser des services basés sur l'adresse.
+## Remarques
+
+- Utilisation du [fichier des communes](http://www.nosdonnees.fr/wiki/index.php/Fichier:EUCircos_Regions_departements_circonscriptions_communes_gps.csv.gz) de [NosDonnées.fr](http://www.nosdonnees.fr).
+- Pour une géolocalisation plus précise, utiliser des services basés sur l'adresse.
+
+## Utilisation
 
 ```r
 (sample <- data.frame(
@@ -10,16 +15,17 @@ Remarque : pour une géolocalisation plus précise, utiliser des services basés
 ))
 ```
 
-| cp       |
-|----------|
-| 22000    |
-| 29000    |
-| 35000    |
-| 35999    |
-| 56000    |
-| 56999    |
+| cp    |
+|-------|
+| 22000 |
+| 29000 |
+| 35000 |
+| 35999 |
+| 56000 |
+| 56999 |
 
 ```r
+source("Rgeo/Rgeo.R", chdir = T)
 sample[, c("lon", "lat")] <- get_coordinates(sample$cp)
 sample
 ```
