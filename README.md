@@ -39,7 +39,7 @@ sample
 | 56000 | -2.750000 | 47.66667 |
 | 56999 | NA        | NA       |
 
-## Utilisation du paramètre strict
+### Utilisation du paramètre strict
 
 Géolocalisation à partir d'un code postal de la forme `<département>000` (exemple : 35999 => 35000).
 
